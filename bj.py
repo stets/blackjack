@@ -88,9 +88,9 @@ elif playerScore < 21:
 	print "Your score is", playerScore, " would you like to hit?"
 	hitorstay = raw_input("\ny to hit, n to stand: ")
 	if hitorstay == 'y' or hitorstay == 'Y':
-		print "u hittin girl"
+		print "u hittin"
 		hitagain()
 	elif hitorstay == 'n' or hitorstay == 'N':
-		print "shit u stayin doe"
+		print "u stayin doe"
 	
 
