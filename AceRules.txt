@@ -1,6 +1,0 @@
-if score over 21 and ace:
-	score - 10
-if score over 21 and no ace:
-	bust
-
-

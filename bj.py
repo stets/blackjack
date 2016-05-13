@@ -35,16 +35,16 @@ def dealdealer():
 #	print "\n\nThere are " + str(len(cards) - 1) + " cards in the deck after the deal\n\n"
 
 def hitagain():
-	playerScore = 0
+	global playerScore
 	x = random.randrange(0,len(cards)-1)
 
 	playerHand.append(cards[x])
 	cards.remove(cards[x])
 	plCard3 = playerHand[2]	
 
-	print "The player has", playerHand
+	print "The player has drawn", playerHand[2], "to make", playerHand
 	
-	if plCard3[0] == 'J' or plCard2[0] == 'Q' or plCard2[0] == 'K' or plCard2[:2] == '10':
+	if plCard3[0] == 'J' or plCard3[0] == 'Q' or plCard3[0] == 'K' or plCard2[:2] == '10':
 		playerScore = playerScore + 10
 
 	elif plCard3[0] == 'A':
@@ -52,10 +52,20 @@ def hitagain():
 
 	elif plCard3[0] == plCard3[0]:
 		playerScore =  playerScore + int(plCard3[0])
+
+	print "Your Score is", playerScore
 	if playerScore == 21:
 		print "You got blackjack!"
-
-	print "Score is:", playerScore
+	elif playerScore >= 22:
+		print "You bust!"
+	elif playerScore <= 20:
+		print "Would you like to hit?"
+		hitorstay = raw_input("\ny to hit, n to stand: ")
+		if hitorstay == 'y' or hitorstay == 'Y':
+			print "u hittin"
+			hitagain()
+		elif hitorstay == 'n' or hitorstay == 'N':
+			print "u stayin doe"
 dealplayer()
 dealplayer()
 
