@@ -1,9 +1,9 @@
-# Python Blackjack v.00001
+# Python Blackjack v.01
 #
 # Stetson Blake
 #
 
-11/2/15
+5/13/2016
 
-A simple blackjack game. It hardly works and you can only play against yourself. There is also only one suit.  
-I'd like to add card counting simulation and statistics on the computer playing against itself with basic strategy in the future. 
+
+A simple blackjack game.
